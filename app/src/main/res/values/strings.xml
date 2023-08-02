@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">OBDApp</string>
+    <string name="velocidad">Velocidad</string>
+    <string name="permanentTroubleCodes">Permanent Trouble Codes</string>
+    <string name="engineLoad">Engine Load</string>
+    <string name="engineRPM">Engine RPM</string>
+    <string name="throttlePosition">Throttle Position</string>
+    <string name="btnElegirDispositivo">Elegir dispositivo</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="cbEngineCoolantTemperature">Engine Coolant Temperature</string>
+    <string name="btnConectar">Conectar</string>
+    <string name="btnElegirParametros">Elegir parámetros</string>
+    <string name="msgNingunDispositivoBluetooth">No se ha seleccionado ningún dispositivo Bluetooth</string>
+    <string name="btnIniciarLectura">Iniciar lectura</string>
+    <string name="btnDetenerLectura">Detener lectura</string>
+    <string name="labelVelocidad">Velocidad (km/h):</string>
+    <string name="labelPermanentTroubleCodes">Permanent Trouble Codes:</string>
+    <string name="labelEngineLoad">Engine Load:</string>
+    <string name="labelEngineRPM">Engine RPM:</string>
+    <string name="labelThrottlePosition">Throttle Position:</string>
+    <string name="labelEngineCoolantTemperature">Engine Coolant Temperature:</string>
+    <string name="btnGuardarDatos">Guardar datos</string>
+    <string name="logo_poli">Logo Poli</string>
+    <string name="obd_ii_reader">OBD-II reader</string>
+    <string name="v1_0_2022">v1.0 2022</string>
+    <string name="btnSalir">Salir</string>
+
+</resources>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <!-- Botón 'Elegir dispositivo' -->
+        <Button
+            android:id="@+id/bChooseDevice"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/btnElegirDispositivo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón 'Conectar' -->
+        <Button
+            android:id="@+id/bConnect"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@string/btnConectar"
+            app:layout_constraintTop_toBottomOf="@+id/bChooseDevice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Textview para mensajes -->
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="267dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/msgNingunDispositivoBluetooth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bConnect"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Botón 'Iniciar lectura' -->
+        <Button
+            android:id="@+id/bStart"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/btnIniciarLectura"
+            app:layout_constraintEnd_toStartOf="@+id/bStop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            tools:layout_editor_absoluteY="315dp"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Botón 'Detener lectura' -->
+        <Button
+            android:id="@+id/bStop"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/btnDetenerLectura"
+            app:layout_constraintStart_toEndOf="@+id/bStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Speed (1) -->
+        <!-- Etiqueta 'Velocidad' -->
+        <TextView
+            android:id="@+id/command_SpeedLabel"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/labelVelocidad"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bStart"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Engine (3) -->
+        <!-- Etiqueta 'Engine Load' -->
+        <TextView
+            android:id="@+id/command_EngineLoadLabel"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/labelEngineLoad"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/command_SpeedLabel" />
+
+        <!-- Etiqueta 'RPM' -->
+        <TextView
+            android:id="@+id/command_RPMLabel"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/labelEngineRPM"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/command_EngineLoadLabel" />
+
+        <!-- Etiqueta 'Throttle Position' -->
+        <TextView
+            android:id="@+id/command_ThrottlePositionLabel"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/labelThrottlePosition"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/command_RPMLabel" />
+
+        <!-- Temperature (1) -->
+        <!-- Etiqueta 'Engine Coolant Temperature' -->
+        <TextView
+            android:id="@+id/command_EngineCoolantTemperatureLabel"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/labelEngineCoolantTemperature"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/command_ThrottlePositionLabel" />
+
+        <!-- Speed (1) -->
+        <!-- Resultado de 'Velocidad' -->
+        <TextView
+            android:id="@+id/command_SpeedResult"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:background="@drawable/textview_border"
+            app:layout_constraintStart_toEndOf="@+id/command_SpeedLabel"
+            app:layout_constraintTop_toBottomOf="@+id/bStop"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Engine (3) -->
+        <!-- Resultado 'Engine Load' -->
+        <TextView
+            android:id="@+id/command_EngineLoadResult"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/textview_border"
+            app:layout_constraintStart_toEndOf="@+id/command_EngineLoadLabel"
+            app:layout_constraintTop_toBottomOf="@+id/command_SpeedResult"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Resultado 'RPM' -->
+        <TextView
+            android:id="@+id/command_RPMResult"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/textview_border"
+            app:layout_constraintStart_toEndOf="@+id/command_RPMLabel"
+            app:layout_constraintTop_toBottomOf="@+id/command_EngineLoadResult"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Resultado 'Throttle Position' -->
+        <TextView
+            android:id="@+id/command_ThrottlePositionResult"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/textview_border"
+            app:layout_constraintStart_toEndOf="@+id/command_ThrottlePositionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/command_RPMResult"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Temperature (1) -->
+        <!-- Resultado 'Engine Coolant Temperature' -->
+        <TextView
+            android:id="@+id/command_EngineCoolantTemperatureResult"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/textview_border"
+            app:layout_constraintStart_toEndOf="@+id/command_EngineCoolantTemperatureLabel"
+            app:layout_constraintTop_toBottomOf="@+id/command_ThrottlePositionResult"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón 'Guardar datos' -->
+        <Button
+            android:id="@+id/bExitApp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/btnSalir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/command_EngineCoolantTemperatureResult" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
